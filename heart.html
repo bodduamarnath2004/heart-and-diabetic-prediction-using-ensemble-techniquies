@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+            color: black;
+        }
+
+        .head {
+            width: 100%;
+            overflow: hidden;
+            height: 60px;
+            background-color: orangered;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .b {
+            display: flex;
+        }
+
+        .b1 {
+            max-width: 30%;
+            max-height: 800vh;
+            background-color: darksalmon;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .b2 {
+            min-width: 80%;
+            margin: 2% 5%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        input {
+            height: 30px;
+            border: 3px solid black;
+            font-size: medium;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .b33 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 0 15px 0px 0px;
+        }
+
+        p {
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .pred {
+            text-align: center;
+        }
+
+        .b3 {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .but {
+            width: 100px;
+            height: 60px;
+            color: white;
+            background-color: orangered;
+            border: 0px;
+            font-size: larger;
+            margin-left: 50%;
+            margin-top: 50px;
+        }
+
+        .but:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .hovertext {
+            position: relative;
+        }
+
+        .hovertext:before {
+            content: attr(data-hover);
+            visibility: hidden;
+            opacity: 0;
+            width: 140px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 0;
+            transition: opacity 1s ease-in-out;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 110%;
+        }
+
+        .hovertext:hover:before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .but1 {
+            background: transparent;
+            padding: 5px;
+            border: 0px solid black;
+            margin: 0% 2px 0px 0px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .b1 p {
+            background-color: white;
+            border: 0;
+            padding: 5px;
+        }
+
+        .b5 {
+            min-height: 92vh;
+        }
+
+        .pred {
+            text-align: center;
+            font-size: 50px;
+            color: green;
+            width: 100%;
+            margin-left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head"></div>
+    <div class="b">
+        <div class="b1 b5">
+            <p>Heart Stroke Prediction</p>
+            <button class="but1"><a href="diabetic.html">DIABETIC PREDICTION</a></button>
+        </div>
+        <div class="b2">
+            <form action="{{url_for('predict')}}" method="post">
+                <div class="b3">
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Having Heart Disease</p>
+                        <input type="text" name="1" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Having High BP</p>
+                        <input type="text" name="2" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Having High col</p>
+                        <input type="text" name="3" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">SMOKER</p>
+                        <input type="text" name="4" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Diabetic</p>
+                        <input type="text" name="5" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Physical Activity</p>
+                        <input type="text" name="6" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Fruits</p>
+                        <input type="text" name="7" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Veggies</p>
+                        <input type="text" name="8" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">General Health</p>
+                        <input type="text" name="9" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">DiffWalk</p>
+                        <input type="text" name="10" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Sex</p>
+                        <input type="text" name="11" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Age</p>
+                        <input type="text" name="12" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Education</p>
+                        <input type="text" name="13" id="" required>
+                    </div>
+                    <div class="b33">
+                        <p class="hovertext" data-hover="Hello, this is the tooltip">Income</p>
+                        <input type="text" name="14" id="" required>
+                    </div>
+                </div>
+                <div class="b3">
+                    <div class="b33">
+                        <button class="but" type="submit" onclick="">
+                            Predict
+                        </button>
+                    </div>
+                </div>
+                <div class="b3">
+                    <div class="b33">
+                        <p class="pred">{{ pred }}</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
