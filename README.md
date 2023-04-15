@@ -6,6 +6,6 @@ The method used here was machine learning modeling where initially a dataset was
 Later the well formed dataset was splitted into training and testing data and then fit into ExtraTreeClassifier and was used for Diabetics prediction and another model known as random forest classifier was used for Heart stroke prediction.
 Then this model was linked to html code using pickel package and then the code was deployed using amazon web services and the website was finally created.
 
-%The results of the model can be described based on the accuracy achieved y the models
+The results of the model can be described based on the accuracy achieved y the models
 For diabetics Prediction, ExtraTrees Classifier has given an accuracy of 85.79%
 For diabetics Prediction, RandomForest Classifier has given an accuracy of 98.46%
